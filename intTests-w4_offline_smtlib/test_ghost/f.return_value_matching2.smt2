@@ -1,0 +1,15 @@
+(set-option :produce-models true)
+; :1:0
+(declare-fun x0 () (_ BitVec 32))
+(define-fun x!0 () Bool (bvult x0 (_ bv128 32)))
+(assert x!0)
+(declare-fun x1 () (_ BitVec 32))
+(define-fun x!1 () Bool (bvult x1 (_ bv512 32)))
+(assert x!1)
+(define-fun x!2 () (_ BitVec 32) (bvmul x0 x1))
+(define-fun x!3 () (_ BitVec 32) (bvmul x0 x1))
+(define-fun x!4 () Bool (= x!2 x!3))
+(assert (not x!4))
+(check-sat)
+(exit)
+;./test_ghost/f.return_value_matching2.smt2

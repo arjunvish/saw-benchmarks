@@ -1,0 +1,18 @@
+(set-option :produce-models true)
+; :1:0
+(declare-fun x0 () (_ BitVec 1))
+(define-fun x!0 () (_ BitVec 8) (concat (_ bv0 7) x0))
+(define-fun x!1 () (_ BitVec 8) (bvand (_ bv1 8) x!0))
+(define-fun x!2 () (_ BitVec 8) (bvshl x!1 (_ bv3 8)))
+(declare-datatype Struct1 (par (T0) ((mk-struct1 (struct1-proj0 T0)))))
+(declare-fun x1 () (Array (_ BitVec 64) (_ BitVec 8)))
+(define-fun x!3 () (_ BitVec 8) (select x1 (_ bv4 64)))
+(define-fun x!4 () (_ BitVec 8) (bvand (_ bv247 8) x!3))
+(define-fun x!5 () (_ BitVec 8) (bvor x!2 x!4))
+(define-fun x!6 () (_ BitVec 1) ((_ extract 3 3) x!5))
+(define-fun x!7 () Bool (= x!6 x0))
+(define-fun x!8 () Bool (not x!7))
+(assert x!8)
+(check-sat)
+(exit)
+;./test_bitfield_x86/set_y.LLVM_points-to_(bitfield)0.smt2

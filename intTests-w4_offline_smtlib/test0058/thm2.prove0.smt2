@@ -3,3 +3,4 @@
 (assert false)
 (check-sat)
 (exit)
+;./test0058/thm2.prove0.smt2

@@ -31,3 +31,4 @@
 ; -- finalAssert ---
 (assert s8)
 (check-sat)
+;./test_smtlib/prove.prove0.smt2

@@ -37,3 +37,4 @@
 (assert x!27)
 (check-sat)
 (exit)
+;./test_newtype/test_newtypes-02.prove0.smt2

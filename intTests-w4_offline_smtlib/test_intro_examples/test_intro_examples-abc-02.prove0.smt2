@@ -139,3 +139,4 @@
 (assert x!134)
 (check-sat)
 (exit)
+;./test_intro_examples/test_intro_examples-abc-02.prove0.smt2

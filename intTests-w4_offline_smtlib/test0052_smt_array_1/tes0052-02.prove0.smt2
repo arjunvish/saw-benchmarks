@@ -14,3 +14,4 @@
 (assert (not x!4))
 (check-sat)
 (exit)
+;./test0052_smt_array_1/tes0052-02.prove0.smt2

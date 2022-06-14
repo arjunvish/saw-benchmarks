@@ -29,3 +29,4 @@
 ; -- finalAssert ---
 (assert s6)
 (check-sat)
+;./test_smtlib/sat.smt2

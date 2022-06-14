@@ -230,3 +230,4 @@
 (assert x!223)
 (check-sat)
 (exit)
+;./test0015_sawscript_aig/supportthm.prove0.smt2

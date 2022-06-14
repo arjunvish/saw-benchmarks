@@ -1829,3 +1829,4 @@
 (assert (not x!1822))
 (check-sat)
 (exit)
+;./test0063_polyarith/test0063-01.prove0.smt2

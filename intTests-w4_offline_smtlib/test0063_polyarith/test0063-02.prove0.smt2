@@ -3135,3 +3135,4 @@
 (assert (not x!3128))
 (check-sat)
 (exit)
+;./test0063_polyarith/test0063-02.prove0.smt2

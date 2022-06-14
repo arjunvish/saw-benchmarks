@@ -5,3 +5,4 @@
 (assert x!0)
 (check-sat)
 (exit)
+;./test0069_unfinished/test0069-01.prove0.smt2

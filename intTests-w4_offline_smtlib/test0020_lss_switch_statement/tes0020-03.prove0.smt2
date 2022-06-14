@@ -11,3 +11,4 @@
 (assert x!6)
 (check-sat)
 (exit)
+;./test0020_lss_switch_statement/tes0020-03.prove0.smt2

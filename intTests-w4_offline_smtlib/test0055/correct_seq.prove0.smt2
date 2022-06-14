@@ -3,3 +3,4 @@
 (assert false)
 (check-sat)
 (exit)
+;./test0055/correct_seq.prove0.smt2

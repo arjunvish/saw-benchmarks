@@ -308,3 +308,4 @@
 (assert x!284)
 (check-sat)
 (exit)
+;./test0051_compositional_extract_2/test0051-yices-02.prove0.smt2

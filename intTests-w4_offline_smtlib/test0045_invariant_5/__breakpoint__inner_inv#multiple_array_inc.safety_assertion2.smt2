@@ -1,0 +1,16 @@
+(set-option :produce-models true)
+; :1:0
+(declare-fun x2 () (_ BitVec 64))
+(declare-fun x0 () (_ BitVec 64))
+(define-fun x!0 () Bool (bvult x2 x0))
+(assert x!0)
+(declare-fun x1 () (_ BitVec 64))
+(define-fun x!1 () Bool (bvult (_ bv100 64) x1))
+(assert (not x!1))
+(define-fun x!2 () Bool (bvult x1 (_ bv100 64)))
+(assert x!2)
+(define-fun x!3 () Bool (bvult (_ bv99 64) x1))
+(assert x!3)
+(check-sat)
+(exit)
+;./test0045_invariant_5/__breakpoint__inner_inv#multiple_array_inc.safety_assertion2.smt2

@@ -5,3 +5,4 @@
 (assert x!0)
 (check-sat)
 (exit)
+;./test_crucible_jvm/test_crucible_jvm-abc-05.sat0.smt2

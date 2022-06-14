@@ -52,3 +52,4 @@
 (assert x!44)
 (check-sat)
 (exit)
+;./test0051_compositional_extract_2/test0051-yices-01.prove0.smt2

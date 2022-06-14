@@ -11,3 +11,4 @@
 (assert x!5)
 (check-sat)
 (exit)
+;./test_rewrite_int/test_rewrite_int-01.prove0.smt2

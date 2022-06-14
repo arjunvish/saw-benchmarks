@@ -40,3 +40,4 @@
 (assert x!34)
 (check-sat)
 (exit)
+;./test_intro_examples/test_intro_examples-abc-03.sat0.smt2

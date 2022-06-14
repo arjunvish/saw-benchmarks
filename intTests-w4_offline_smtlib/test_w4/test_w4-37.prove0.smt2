@@ -3,3 +3,4 @@
 (assert false)
 (check-sat)
 (exit)
+;./test_w4/test_w4-37.prove0.smt2

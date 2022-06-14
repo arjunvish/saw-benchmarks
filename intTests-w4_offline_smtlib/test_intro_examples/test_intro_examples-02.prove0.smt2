@@ -108,3 +108,4 @@
 (assert x!103)
 (check-sat)
 (exit)
+;./test_intro_examples/test_intro_examples-02.prove0.smt2
