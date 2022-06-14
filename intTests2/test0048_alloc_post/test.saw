@@ -6,4 +6,4 @@ let make_A_spec = do {
   llvm_points_to (llvm_field a_ptr "b") (llvm_term b);
   llvm_return a_ptr;
 };
-llvm_verify m "make_A" [] false make_A_spec z3;
+llvm_verify m "make_A" [] false make_A_spec (w4_offline_smtlib2 "make_A");

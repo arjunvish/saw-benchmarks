@@ -49,9 +49,9 @@ let main : TopLevel () = do {
     
     // The actual subroutine result would be "llvm_unsafe_assume_spec ..."
     enable_crucible_assert_then_assume;
-    clear_void_12_result <- llvm_verify voidTest "clear_void" [] true clear_void_spec z3;
+    clear_void_12_result <- llvm_verify voidTest "clear_void" [] true clear_void_spec (w4_offline_smtlib2 "clear_void");
     disable_crucible_assert_then_assume;
-    clear_uints_3_result <- llvm_verify voidTest "clear_uints" [clear_void_12_result] true clear_uints_spec z3;
+    clear_uints_3_result <- llvm_verify voidTest "clear_uints" [clear_void_12_result] true clear_uints_spec (w4_offline_smtlib2 "clear_uints");
     
     print "Done!";
 };

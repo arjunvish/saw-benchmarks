@@ -6,7 +6,7 @@ let id_spec = do {
     llvm_return p;
 };
 
-llvm_verify m "id_p" [] false id_spec z3;
+llvm_verify m "id_p" [] false id_spec (w4_offline_smtlib2 "id_p");
 
 // NOTE: Commented out due to bug #31 in cryptol-verifier
 // let incr_spec = do {
@@ -14,7 +14,7 @@ llvm_verify m "id_p" [] false id_spec z3;
 //     llvm_execute_func [p];
 //     llvm_return (llvm_elem p 1);
 // };
-// llvm_verify m "incr_p" [] false incr_spec z3;
+// llvm_verify m "incr_p" [] false incr_spec (w4_offline_smtlib2 "incr_p");
 
 let add_two_spec = do {
     x <- llvm_fresh_var "x" (llvm_int 32);
@@ -26,7 +26,7 @@ let add_two_spec = do {
     llvm_points_to_untyped xp (llvm_term {{ x + 2 }});
 };
 
-llvm_verify m "add_two" [] false add_two_spec z3;
+llvm_verify m "add_two" [] false add_two_spec (w4_offline_smtlib2 "add_two");
 
 let array_swap_spec = do {
     a0 <- llvm_fresh_var "a0" (llvm_int 32);
@@ -40,7 +40,7 @@ let array_swap_spec = do {
     llvm_points_to (llvm_elem a 1) (llvm_term a0);
 };
 
-llvm_verify m "array_swap" [] false array_swap_spec z3;
+llvm_verify m "array_swap" [] false array_swap_spec (w4_offline_smtlib2 "array_swap");
 
 let struct_swap_spec = do {
     x <- llvm_fresh_var "x" (llvm_int 32);
@@ -67,5 +67,5 @@ let struct_swap_spec2 = do {
     llvm_points_to (llvm_elem s 1) (llvm_term x);
 };
 
-llvm_verify m "struct_swap" [] false struct_swap_spec z3;
-llvm_verify m "struct_swap" [] false struct_swap_spec2 z3;
+llvm_verify m "struct_swap" [] false struct_swap_spec (w4_offline_smtlib2 "struct_swap");
+llvm_verify m "struct_swap" [] false struct_swap_spec2 (w4_offline_smtlib2 "struct_swap");

@@ -7,7 +7,7 @@ let foo_setup = do {
   llvm_return (llvm_term {{ x + 1 : [32] }});
   // llvm_points_to (llvm_elem (llvm_global "GLOBAL") 1) (llvm_term x);
 };
-foo_spec <- llvm_verify MODULE "foo" [] false foo_setup z3;
+foo_spec <- llvm_verify MODULE "foo" [] false foo_setup (w4_offline_smtlib2 "foo");
 
 let bar_setup = do {
   llvm_alloc_global "GLOBAL";
@@ -17,9 +17,9 @@ let bar_setup = do {
 };
 
 // the below line (without override) correctly fails
-// llvm_verify MODULE "bar" [] false bar_setup z3;
+// llvm_verify MODULE "bar" [] false bar_setup (w4_offline_smtlib2 "bar");
 
 // works, but shouldn't
-llvm_verify MODULE "bar" [foo_spec] false bar_setup z3;
+llvm_verify MODULE "bar" [foo_spec] false bar_setup (w4_offline_smtlib2 "bar");
 
 print "Should not have succeeded - unsound!";

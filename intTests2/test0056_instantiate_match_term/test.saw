@@ -10,6 +10,6 @@ let bar_spec = do {
   llvm_execute_func [];
 };
 
-foo_ov <- llvm_verify m "foo" [] false foo_spec abc;
-llvm_verify m "bar" [foo_ov] false bar_spec abc;
+foo_ov <- llvm_verify m "foo" [] false foo_spec (w4_offline_smtlib2 "foo");
+llvm_verify m "bar" [foo_ov] false bar_spec (w4_offline_smtlib2 "bar");
 

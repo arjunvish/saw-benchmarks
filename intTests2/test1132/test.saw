@@ -8,4 +8,4 @@ let f_contract = do {
   llvm_points_to p (llvm_term {{ 42 : [8] }});
 };
 
-llvm_verify bc "f" [] false f_contract abc;
+llvm_verify bc "f" [] false f_contract (w4_offline_smtlib2 "f");

@@ -7,7 +7,7 @@ let f_setup = do {
 
 // should fail because destination is not mutable,
 // even though the memcpy is 0 length
-fails (llvm_verify m "f" [] false f_setup z3);
+fails (llvm_verify m "f" [] false f_setup (w4_offline_smtlib2 "f"));
 
 let g_setup = do {
   xp <- llvm_alloc (llvm_array 4 (llvm_int 8));
@@ -15,7 +15,7 @@ let g_setup = do {
   };
 
 // should succeed because memcpy is allowed to copy uninitilized bytes
-llvm_verify m "g" [] false g_setup z3;
+llvm_verify m "g" [] false g_setup (w4_offline_smtlib2 "g");
 
 // fails because direct reading of uninitialized bytes is not allowed
-fails (llvm_verify m "h" [] false g_setup z3); // as it should
+fails (llvm_verify m "h" [] false g_setup (w4_offline_smtlib2 "h")); // as it should

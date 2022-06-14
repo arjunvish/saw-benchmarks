@@ -44,9 +44,9 @@ let inc_spec INC = do {
 };
 
 print "Verifying 'inc_1' using 'llvm_verify':";
-llvm_verify m "inc" [] true (inc_spec {{ INC_1 }}) abc;
+llvm_verify m "inc" [] true (inc_spec {{ INC_1 }}) (w4_offline_smtlib2 "inc");
 print "";
 
 print "Verifying 'inc_2' using 'llvm_verify':";
-llvm_verify m "inc" [] true (inc_spec {{ INC_2 }}) abc;
+llvm_verify m "inc" [] true (inc_spec {{ INC_2 }}) (w4_offline_smtlib2 "inc");
 print "";

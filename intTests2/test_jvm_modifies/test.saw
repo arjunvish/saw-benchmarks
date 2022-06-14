@@ -77,13 +77,13 @@ let spec3 =
   };
 
 print "Verification succeeds for complete add1 spec.";
-add1_full <- jvm_verify c "add1" [] false spec1 z3;
+add1_full <- jvm_verify c "add1" [] false spec1 (w4_offline_smtlib2 "add1");
 
 print "Verification succeeds for complete add2 spec.";
-add2_full <- jvm_verify c "add2" [] false spec2 z3;
+add2_full <- jvm_verify c "add2" [] false spec2 (w4_offline_smtlib2 "add2");
 
 print "Verification succeeds for complete add3 spec.";
-add3_full <- jvm_verify c "add3" [] false spec3 z3;
+add3_full <- jvm_verify c "add3" [] false spec3 (w4_offline_smtlib2 "add3");
 
 ////////////////////////////////////////////////////////////////////////////////
 // Partial specifications with jvm_modifies
@@ -144,13 +144,13 @@ add3_part_a <-
 // Compositional verification with full specs
 
 print "Compositional verification succeeds with full add1 spec.";
-wrap1_full <- jvm_verify c "wrap1" [add1_full] false spec1 z3;
+wrap1_full <- jvm_verify c "wrap1" [add1_full] false spec1 (w4_offline_smtlib2 "wrap1");
 
 print "Compositional verification succeeds with full add1 spec.";
-wrap2_full <- jvm_verify c "wrap2" [add2_full] false spec2 z3;
+wrap2_full <- jvm_verify c "wrap2" [add2_full] false spec2 (w4_offline_smtlib2 "wrap2");
 
 print "Compositional verification succeeds with full add1 spec.";
-wrap3_full <- jvm_verify c "wrap3" [add3_full] false spec3 z3;
+wrap3_full <- jvm_verify c "wrap3" [add3_full] false spec3 (w4_offline_smtlib2 "wrap3");
 
 ////////////////////////////////////////////////////////////////////////////////
 // Compositional verification with partial specs
@@ -158,12 +158,12 @@ wrap3_full <- jvm_verify c "wrap3" [add3_full] false spec3 z3;
 // TODO: Improve misleading "Ill-formed value for type int" error message.
 
 print "Compositional verification fails with partial add1 spec.";
-fails (jvm_verify c "wrap1" [add1_part] false spec1 z3);
+fails (jvm_verify c "wrap1" [add1_part] false spec1 (w4_offline_smtlib2 "wrap1"));
 
 print "Compositional verification fails with partial add2 spec.";
-fails (jvm_verify c "wrap2" [add2_part] false spec2 z3);
+fails (jvm_verify c "wrap2" [add2_part] false spec2 (w4_offline_smtlib2 "wrap2"));
 
 print "Compositional verification fails with partial add3 spec.";
-fails (jvm_verify c "wrap3" [add3_part] false spec3 z3);
+fails (jvm_verify c "wrap3" [add3_part] false spec3 (w4_offline_smtlib2 "wrap3"));
 
 print "DONE!";

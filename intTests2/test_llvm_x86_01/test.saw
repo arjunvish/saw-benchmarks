@@ -16,4 +16,4 @@ foo_method_spec <- llvm_verify_x86 m "./test" "foo" [] false foo_setup w4;
 let bar_setup = do {
   llvm_execute_func [];
 };
-llvm_verify m "bar" [foo_method_spec] false bar_setup z3;
+llvm_verify m "bar" [foo_method_spec] false bar_setup (w4_offline_smtlib2 "bar");

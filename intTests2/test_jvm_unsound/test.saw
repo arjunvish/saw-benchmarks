@@ -82,9 +82,9 @@ jvm_verify c "test_b" [set_ov_2] false
   z3;
 
 // It should be impossible to verify the bogus set_spec_1.
-fails (jvm_verify c "set" [] false set_spec_1 z3);
+fails (jvm_verify c "set" [] false set_spec_1 (w4_offline_smtlib2 "set"));
 
 // It should be impossible to verify the bogus set_spec_2.
-fails (jvm_verify c "set" [] false set_spec_2 z3);
+fails (jvm_verify c "set" [] false set_spec_2 (w4_offline_smtlib2 "set"));
 
 print "Done.";

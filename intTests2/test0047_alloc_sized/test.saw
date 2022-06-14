@@ -9,4 +9,4 @@ let set_spec = do {
   llvm_execute_func [both_ptr];
   llvm_points_to (llvm_field both_ptr "x") (llvm_term {{ 10 : [32] }});
 };
-llvm_verify m "set" [] false set_spec z3;
+llvm_verify m "set" [] false set_spec (w4_offline_smtlib2 "set");

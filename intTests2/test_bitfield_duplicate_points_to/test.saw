@@ -12,4 +12,4 @@ let get_y_spec = do {
 };
 
 m <- llvm_load_module "test.bc";
-fails (llvm_verify m "get_y" [] false get_y_spec (w4_unint_z3 []));
+fails (llvm_verify m "get_y" [] false get_y_spec (w4_offline_smtlib2 "get_y"));

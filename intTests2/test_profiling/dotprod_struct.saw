@@ -27,6 +27,6 @@ let dotprod_spec n = do {
 m <- llvm_load_module "dotprod_struct.bc";
 
 enable_crucible_profiling "prof";
-dotprod_ov <- llvm_verify m "dotprod_struct" [] true (dotprod_spec 2) z3;
-llvm_verify m "dotprod_wrap" [dotprod_ov] true (dotprod_spec 2) z3;
+dotprod_ov <- llvm_verify m "dotprod_struct" [] true (dotprod_spec 2) (w4_offline_smtlib2 "dotprod_struct");
+llvm_verify m "dotprod_wrap" [dotprod_ov] true (dotprod_spec 2) (w4_offline_smtlib2 "dotprod_wrap");
 disable_crucible_profiling;

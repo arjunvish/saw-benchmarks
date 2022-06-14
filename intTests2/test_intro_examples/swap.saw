@@ -14,6 +14,6 @@ let swap_spec = do {
     llvm_points_to yp (llvm_term x);
 };
 
-llvm_verify xormod "swap_xor" [] true swap_spec abc;
-llvm_verify directmod "swap_direct" [] true swap_spec abc;
-llvm_verify xormod_bug "swap_xor" [] true swap_spec abc;
+llvm_verify xormod "swap_xor" [] true swap_spec (w4_offline_smtlib2 "swap_xor");
+llvm_verify directmod "swap_direct" [] true swap_spec (w4_offline_smtlib2 "swap_direct");
+llvm_verify xormod_bug "swap_xor" [] true swap_spec (w4_offline_smtlib2 "swap_xor");

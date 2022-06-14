@@ -58,10 +58,10 @@ let get_val_default_spec = do {
   llvm_return (llvm_term ret);
 };
 
-get_val_imp_ov <- llvm_verify m "get_val_impl" [] false get_val_impl_spec (w4_unint_yices []);
-fails (llvm_verify m "get_val_impl" [] false get_val_impl_failure_spec (w4_unint_yices []));
-get_val_ov <- llvm_verify m "get_val" [get_val_imp_ov] false get_val_spec (w4_unint_yices []);
-fails (llvm_verify m "get_val" [get_val_imp_ov] false get_val_failure0_spec (w4_unint_yices []));
-fails (llvm_verify m "get_val" [get_val_imp_ov] false get_val_failure1_spec (w4_unint_yices []));
-llvm_verify m "get_val_default" [get_val_ov] false get_val_default_spec (w4_unint_yices []);
+get_val_imp_ov <- llvm_verify m "get_val_impl" [] false get_val_impl_spec (w4_offline_smtlib2 "get_val_impl");
+fails (llvm_verify m "get_val_impl" [] false get_val_impl_failure_spec (w4_offline_smtlib2 "get_val_impl"));
+get_val_ov <- llvm_verify m "get_val" [get_val_imp_ov] false get_val_spec (w4_offline_smtlib2 "get_val");
+fails (llvm_verify m "get_val" [get_val_imp_ov] false get_val_failure0_spec (w4_offline_smtlib2 "get_val"));
+fails (llvm_verify m "get_val" [get_val_imp_ov] false get_val_failure1_spec (w4_offline_smtlib2 "get_val"));
+llvm_verify m "get_val_default" [get_val_ov] false get_val_default_spec (w4_offline_smtlib2 "get_val_default");
 

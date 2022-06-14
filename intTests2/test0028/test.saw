@@ -21,8 +21,8 @@
     let main : TopLevel () = do {
         structTest <- llvm_load_module "test.bc";
 
-        f_result <- llvm_verify structTest "f" [] false f_spec z3;
-        f_result2 <- llvm_verify structTest "f" [] false f_spec2 z3;
+        f_result <- llvm_verify structTest "f" [] false f_spec (w4_offline_smtlib2 "f");
+        f_result2 <- llvm_verify structTest "f" [] false f_spec2 (w4_offline_smtlib2 "f");
 
         print "Done!";
     };

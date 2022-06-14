@@ -12,4 +12,4 @@ let bad_spec = do {
 
 m <- llvm_load_module "test.bc";
 
-llvm_verify m "double_imp" [] true bad_spec z3;
+llvm_verify m "double_imp" [] true bad_spec (w4_offline_smtlib2 "double_imp");

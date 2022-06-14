@@ -30,6 +30,6 @@ let main : TopLevel () = do {
   m <- llvm_load_module "test.bc";
   get_and_increment_ov <-
     llvm_unsafe_assume_spec m "get_and_increment" (get_and_increment_spec counter);
-  llvm_verify m "f" [get_and_increment_ov] false (f_spec counter) z3;
+  llvm_verify m "f" [get_and_increment_ov] false (f_spec counter) (w4_offline_smtlib2 "f");
   print "done";
 };

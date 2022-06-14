@@ -49,8 +49,8 @@ let main : TopLevel () = do {
     voidTest <- llvm_load_module "test.bc";
 
     // The actual subroutine result would be "llvm_unsafe_assume_spec ..."
-    clear_void_12_result <- llvm_verify voidTest "clear_void" [] false clear_void_spec z3;
-    clear_uints_3_result <- llvm_verify voidTest "clear_uints" [clear_void_12_result] false clear_uints_spec z3;
+    clear_void_12_result <- llvm_verify voidTest "clear_void" [] false clear_void_spec (w4_offline_smtlib2 "clear_void");
+    clear_uints_3_result <- llvm_verify voidTest "clear_uints" [clear_void_12_result] false clear_uints_spec (w4_offline_smtlib2 "clear_uints");
 
     print "Done!";
 };

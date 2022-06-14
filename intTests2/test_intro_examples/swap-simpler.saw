@@ -12,4 +12,4 @@ let swap_spec = do {
     llvm_points_to xp (llvm_term y);
     llvm_points_to yp (llvm_term x);
 };
-llvm_verify m "swap_xor" [] true swap_spec abc;
+llvm_verify m "swap_xor" [] true swap_spec (w4_offline_smtlib2 "swap_xor");

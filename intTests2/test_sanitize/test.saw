@@ -7,5 +7,5 @@ let f_spec = do {
     llvm_execute_func [llvm_term x, llvm_term y];
 };
 
-llvm_verify m_norm "f" [] false f_spec z3;
-fails (llvm_verify m_san "f" [] false f_spec z3);
+llvm_verify m_norm "f" [] false f_spec (w4_offline_smtlib2 "f");
+fails (llvm_verify m_san "f" [] false f_spec (w4_offline_smtlib2 "f"));

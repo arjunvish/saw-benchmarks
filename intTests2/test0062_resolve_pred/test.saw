@@ -14,8 +14,8 @@ let g_spec y = do {
   llvm_points_to x_p (llvm_term {{ `y : [32] }});
 };
 
-f_0_ov <- llvm_verify m "f" [] false (f_spec 0) (w4_unint_z3 []);
-f_1_ov <- llvm_verify m "f" [] false (f_spec 1) (w4_unint_z3 []);
+f_0_ov <- llvm_verify m "f" [] false (f_spec 0) (w4_offline_smtlib2 "f");
+f_1_ov <- llvm_verify m "f" [] false (f_spec 1) (w4_offline_smtlib2 "f");
 let f_ovs =
   [ f_0_ov
   , f_1_ov

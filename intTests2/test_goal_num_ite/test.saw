@@ -25,8 +25,8 @@ let h_spec = do {
   llvm_points_to xp (crucible_term {{(3*x):[64]}});
 };
 
-g_ov <- llvm_verify m "g" [] false g_spec z3;
-h_ov <- llvm_verify m "h" [] false h_spec z3;
+g_ov <- llvm_verify m "g" [] false g_spec (w4_offline_smtlib2 "g");
+h_ov <- llvm_verify m "h" [] false h_spec (w4_offline_smtlib2 "h");
 
 enable_experimental;
 

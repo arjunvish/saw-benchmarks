@@ -26,4 +26,4 @@ let zip_with_add_spec = do {
 };
 
 mod <- llvm_load_module "test.bc";
-llvm_verify mod "zip_with_add" [] false zip_with_add_spec z3;
+llvm_verify mod "zip_with_add" [] false zip_with_add_spec (w4_offline_smtlib2 "zip_with_add");

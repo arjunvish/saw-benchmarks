@@ -19,7 +19,7 @@ let side_spec = do {
   llvm_return (llvm_term {{ a }});
   };
 
-side_proof <- llvm_verify c "side_effect" [] false side_spec abc;
+side_proof <- llvm_verify c "side_effect" [] false side_spec (w4_offline_smtlib2 "side_effect");
 
 let foo_spec = do {
   x <- llvm_fresh_var "x" (llvm_int 32);
@@ -27,5 +27,5 @@ let foo_spec = do {
   llvm_return (llvm_term {{ x }});
   };
 
-bad <- llvm_verify c "foo" [side_proof] false foo_spec abc;
+bad <- llvm_verify c "foo" [side_proof] false foo_spec (w4_offline_smtlib2 "foo");
 print "Done.";
