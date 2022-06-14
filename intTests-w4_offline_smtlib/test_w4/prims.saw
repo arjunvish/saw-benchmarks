@@ -1,0 +1,110 @@
+print "Bitwise operations &&";
+prove_print (w4_offline_smtlib2 "test_w4-01") {{ (0x0F && 131) == 3 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-02") {{ (0x0F || 131) == 143 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-03") {{ (0x0F ^ 0xFF) == 240 }};
+print "this is a bug";
+prove_print (w4_offline_smtlib2 "test_w4-04") {{ ~0x0F == 240 }};
+
+
+print "Arithmetic +";
+prove_print (w4_offline_smtlib2 "test_w4-05") {{ (12:[8]) + 32 == 44 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-06") {{ (252:[8]) + 32 == 28 }};
+
+print "Arithmetic -";
+prove_print (w4_offline_smtlib2 "test_w4-07") {{ (12:[8]) - 3 == 9 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-08") {{ (12:[8]) - 32 == 236 }};
+
+print "Arithmetic *";
+prove_print (w4_offline_smtlib2 "test_w4-09") {{ (12:[8]) * 3 == 36 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-10") {{ (12:[8]) * 200 == 96 }};
+
+print "Arithmetic /";
+prove_print (w4_offline_smtlib2 "test_w4-11") {{ (12:[4]) / 3 == 4 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-12") {{ (12:[4]) / -3 == 0 }};
+
+print "Arithmetic %";
+prove_print (w4_offline_smtlib2 "test_w4-13") {{ (19:[8]) % 3 == 1 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-14") {{ (-19:[8]) % 3 == 0 }};
+
+print "Arithmetic lg2";
+prove_print (w4_offline_smtlib2 "test_w4-15") {{ lg2 (8:[8]) == 3 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-16") {{ lg2 (-8:[8]) == 8 }};
+
+print "Sequences";
+
+prove_print (w4_offline_smtlib2 "test_w4-17") {{ (4:[4]) # (4:[4]) == (68:[8]) }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-18") {{ \(x:[2]) (y:[3]) -> take (x # y) == x }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-19") {{ \(x:[2]) (y:[3]) -> drop (x # y) == y }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-20") {{ \(x:[4]) (y:[1]) -> tail (y # x) == x }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-21") {{ join [2:[2],3:[2]] == 11 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-22") {{ split 0xFFFF == [15, 15, 15, 15] }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-23") {{ \(x:[7]) -> reverse (reverse x) == x }};
+
+print "Sequences @";
+
+prove_print (w4_offline_smtlib2 "test_w4-24") {{ [1,2,3:[8]]@ 0 == 1 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-25") {{ [1,2,3:[8]]@ 1 == 2 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-26") {{ [1,2,3:[8]]@ (2:[2]) == 3 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-27") {{ [1,2,3:[8]]@ (2:[8]) == 3 }};
+print ".";
+fails (prove_print (w4_offline_smtlib2 "test_w4-28") {{ [1,2,3:[8]]@ 5 == 3 }});
+
+print "Sequences !";
+
+prove_print (w4_offline_smtlib2 "test_w4-29") {{ [1,2,3:[8]]! 0 == 3 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-30") {{ [1,2,3:[8]]! 1 == 2 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-31") {{ [1,2,3:[8]]! (2:[2]) == 1 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-32") {{ [1,2,3:[8]]! (2:[8]) == 1 }};
+print ".";
+fails (prove_print (w4_offline_smtlib2 "test_w4-33") {{ [1,2,3:[8]]! 5 == 1 }});
+
+print "Shifting, rotating";
+
+prove_print (w4_offline_smtlib2 "test_w4-34") {{ (16:[8]) >> 3 == 2 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-35") {{ (15:[8]) >> 3 == 1 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-36") {{ 0xF0 >> 4 == 15 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-37") {{ 0xF0 >> 8 == 0 }};
+
+prove_print (w4_offline_smtlib2 "test_w4-38") {{ (15:[8]) << 3 == 120 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-39") {{ (15:[8]) << 7 == 128 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-40") {{ (1:[8]) << 8 == 0 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-41") {{ (128:[8]) <<< 2 == 2 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-42") {{ (2:[8]) >>> 2 == 128 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-43") {{ (4:[8]) >>> 3 == 128 }};
+
+
+print "Misc";
+prove_print (w4_offline_smtlib2 "test_w4-44") {{ min (4:[8]) 5 == 4 }};
+print ".";
+prove_print (w4_offline_smtlib2 "test_w4-45") {{ max (4:[8]) 5 == 5 }};
+
+
+print "Done";

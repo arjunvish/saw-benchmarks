@@ -1,0 +1,8 @@
+import "complex.cry";
+
+prove_print (w4_offline_smtlib2 "test_newtypes-01") {{ \ x y z -> cplxAddAssoc x y z}};
+
+prove_print (w4_offline_smtlib2 "test_newtypes-02") {{ \ x y z -> cplxMulAssoc x y z}};
+
+prove_print (w4_offline_smtlib2 "test_newtypes-03") {{ \ x y z -> cplxMulDistrib x y z}};
+

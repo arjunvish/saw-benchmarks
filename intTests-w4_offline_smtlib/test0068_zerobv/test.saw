@@ -1,0 +1,7 @@
+// test case for github issue https://github.com/GaloisInc/saw-script/issues/872
+
+prove_print (w4_offline_smtlib2 "test0068-01") {{ \(x:[0]) y z -> x * (y + z) == x*y + x*z }};
+print "z3 OK";
+
+prove_print (w4_offline_smtlib2 "test0068-02") {{ \(x:[0]) y z -> x * (y + z) == x*y + x*z }};
+print "w4 OK";

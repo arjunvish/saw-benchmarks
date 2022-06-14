@@ -1,0 +1,378 @@
+SAWCoreTerm 376
+[(15,Left "Prelude.String"),(16,Left "Prelude.error"),(45,Left "Prelude.Bool"),(46,Left "Prelude.True"),(63,Left "Prelude.and"),(65,Left "Prelude.or"),(69,Left "Prelude.boolEq"),(137,Left "Prelude.Nat"),(176,Left "Prelude.Vec"),(177,Left "Prelude.gen"),(181,Left "Prelude.atWithDefault"),(182,Left "Prelude.at"),(187,Left "Prelude.zipWith"),(192,Left "Prelude.foldr"),(197,Left "Prelude.vecEq"),(216,Left "Prelude.bvNat"),(226,Left "Prelude.bvAdd"),(229,Left "Prelude.bvult"),(230,Left "Prelude.bvule"),(244,Left "Prelude.bvNeg"),(245,Left "Prelude.bvSub"),(247,Left "Prelude.bvMul"),(263,Left "Prelude.bvEq"),(273,Left "Prelude.Stream"),(290,Left "Prelude.Integer"),(305,Left "Prelude.intToBv"),(486,Left "Cryptol.Num"),(487,Left "Cryptol.TCNum"),(488,Left "Cryptol.TCInf"),(510,Left "Cryptol.seq"),(553,Left "Cryptol.bvCmp"),(562,Left "Cryptol.PEq"),(570,Left "Cryptol.PEqWord"),(574,Left "Cryptol.PCmp"),(580,Left "Cryptol.PCmpWord"),(581,Left "Cryptol.PCmpSeqBool"),(591,Left "Cryptol.PZero"),(610,Left "Cryptol.PRing"),(618,Left "Cryptol.PRingWord"),(619,Left "Cryptol.PRingSeqBool"),(633,Left "Cryptol.PLiteral"),(635,Left "Cryptol.PLiteralSeqBool"),(641,Left "Cryptol.ecNumber"),(644,Left "Cryptol.ecPlus"),(665,Left "Cryptol.ecLt"),(666,Left "Cryptol.ecGt"),(826,Right ("cryptol:/Main/g",["g","Main::g"])),(827,Right ("cryptol:/Main/f",["f","Main::f"]))]
+1 Sort 0 False
+2 Data 137 1 |
+3 Pi _ 1 1
+4 Pi _ 2 3
+5 Primitive 176 4
+6 Nat 32
+7 App 5 6
+8 Primitive 45 1
+9 App 7 8
+10 Sort 1 False
+11 Pi _ 1 10
+12 Var 0
+13 Var 1
+14 Pi _ 13 8
+15 Pi _ 12 14
+16 RecordType [("eq",15)]
+17 Lam a 1 16
+18 Constant 562 11 17
+19 App 18 12
+20 Pi _ 8 8
+21 Pi _ 13 20
+22 Pi _ 12 21
+23 RecordType [("cmpEq",19),("cmp",22),("le",15),("lt",15)]
+24 Lam a 1 23
+25 Constant 574 11 24
+26 App 25 12
+27 Var 2
+28 Pi _ 27 8
+29 Pi _ 13 28
+30 Pi _ 26 29
+31 Pi a 1 30
+32 RecordType [("cmp",22),("cmpEq",16),("le",15),("lt",15)]
+33 RecordProj 12 lt
+34 Lam pa 32 33
+35 Lam a 1 34
+36 Constant 665 31 35
+37 Var 3
+38 App 36 37
+39 App 38 27
+40 App 39 12
+41 App 40 13
+42 Lam y 27 41
+43 Lam x 13 42
+44 Lam pa 32 43
+45 Lam a 1 44
+46 Constant 666 31 45
+47 App 46 9
+48 Data 486 1 |
+49 Pi _ 48 3
+50 Lam num 48 1
+51 Pi num 48 10
+52 App 5 12
+53 App 52 13
+54 Lam n 2 53
+55 Pi n 2 1
+56 Pi a 1 1
+57 Data 273 56 12 |
+58 Pi _ 2 48
+59 Recursor 486 1 | 50 51 [(487,(54,55)),(488,(57,1))] [(487,58),(488,48)]
+60 RecursorApp 59 13
+61 Lam a 1 60
+62 Lam num 48 61
+63 Constant 510 49 62
+64 App 63 12
+65 App 64 8
+66 App 25 65
+67 Pi n 48 66
+68 Lam n 48 66
+69 Pi n 48 10
+70 App 52 8
+71 App 25 70
+72 Pi n 2 71
+73 App 18 70
+74 Pi n 2 73
+75 App 5 13
+76 App 75 8
+77 Pi _ 76 8
+78 Pi _ 70 77
+79 Pi n 2 78
+80 Sort 0 True
+81 App 5 27
+82 App 81 13
+83 App 5 37
+84 App 83 27
+85 Pi _ 84 8
+86 Pi _ 82 85
+87 Pi _ 15 86
+88 Pi a 80 87
+89 Pi n 2 88
+90 Pi _ 27 37
+91 Pi _ 27 90
+92 Var 4
+93 App 81 92
+94 Pi _ 93 92
+95 Pi _ 27 94
+96 Pi _ 91 95
+97 Pi n 2 96
+98 Pi b 1 97
+99 Pi a 1 98
+100 Primitive 192 99
+101 App 100 8
+102 App 101 8
+103 App 102 92
+104 Pi _ 8 20
+105 Primitive 63 104
+106 App 103 105
+107 Primitive 46 8
+108 App 106 107
+109 Pi _ 27 27
+110 Pi _ 27 109
+111 App 52 92
+112 App 75 92
+113 Pi _ 112 93
+114 Pi _ 111 113
+115 Pi n 2 114
+116 Pi _ 110 115
+117 Pi c 1 116
+118 Pi b 80 117
+119 Pi a 80 118
+120 Pi _ 2 13
+121 Pi _ 120 82
+122 Pi a 1 121
+123 Pi n 2 122
+124 Primitive 177 123
+125 App 124 27
+126 App 125 92
+127 App 75 12
+128 Pi _ 2 27
+129 Pi _ 127 128
+130 Pi a 80 129
+131 Pi n 2 130
+132 Pi _ 2 37
+133 Pi _ 82 132
+134 Pi _ 12 133
+135 Pi a 1 134
+136 Pi n 2 135
+137 Primitive 181 136
+138 App 137 37
+139 App 138 27
+140 Sort 1 True
+141 Primitive 15 1
+142 Pi _ 141 13
+143 Pi a 140 142
+144 Primitive 16 143
+145 App 144 27
+146 String "at: index out of bounds"
+147 App 145 146
+148 App 139 147
+149 App 148 13
+150 App 149 12
+151 Lam i 2 150
+152 Lam v 127 151
+153 Lam a 80 152
+154 Lam n 2 153
+155 Constant 182 131 154
+156 App 155 37
+157 Var 7
+158 App 156 157
+159 App 158 27
+160 App 159 12
+161 App 92 160
+162 Var 6
+163 App 156 162
+164 App 163 13
+165 App 164 12
+166 App 161 165
+167 Lam i 2 166
+168 App 126 167
+169 Lam y 112 168
+170 Lam x 111 169
+171 Lam n 2 170
+172 Lam f 110 171
+173 Lam c 1 172
+174 Lam b 80 173
+175 Lam a 80 174
+176 Constant 187 119 175
+177 App 176 37
+178 App 177 37
+179 App 178 8
+180 App 179 27
+181 App 180 92
+182 App 181 13
+183 App 182 12
+184 App 108 183
+185 Lam y 84 184
+186 Lam x 82 185
+187 Lam eqFn 15 186
+188 Lam a 80 187
+189 Lam n 2 188
+190 Constant 197 89 189
+191 App 190 27
+192 App 191 8
+193 Primitive 69 104
+194 App 192 193
+195 App 194 13
+196 App 195 12
+197 Lam y 76 196
+198 Lam x 70 197
+199 Lam n 2 198
+200 Constant 263 79 199
+201 App 200 12
+202 Record [("eq",201)]
+203 Lam n 2 202
+204 Constant 570 74 203
+205 App 204 12
+206 Pi _ 76 20
+207 Pi _ 70 206
+208 Pi n 2 207
+209 Primitive 65 104
+210 Primitive 229 79
+211 App 210 37
+212 App 211 27
+213 App 212 13
+214 App 209 213
+215 App 200 37
+216 App 215 27
+217 App 216 13
+218 App 105 217
+219 App 218 12
+220 App 214 219
+221 Lam k 8 220
+222 Lam y 76 221
+223 Lam x 70 222
+224 Lam n 2 223
+225 Constant 553 208 224
+226 App 225 12
+227 Primitive 230 79
+228 App 227 12
+229 App 210 12
+230 Record [("cmpEq",205),("cmp",226),("le",228),("lt",229)]
+231 Lam n 2 230
+232 Constant 580 72 231
+233 App 232 12
+234 Lam n 2 233
+235 RecordType [("eq",78)]
+236 RecordType [("cmp",207),("cmpEq",235),("le",78),("lt",78)]
+237 Pi n 2 236
+238 Data 273 56 8 |
+239 App 25 238
+240 App 144 239
+241 String "invalid Cmp instance"
+242 App 240 241
+243 Pi _ 238 20
+244 Pi _ 238 243
+245 Pi _ 238 8
+246 Pi _ 238 245
+247 RecordType [("eq",246)]
+248 RecordType [("cmp",244),("cmpEq",247),("le",246),("lt",246)]
+249 Recursor 486 1 | 68 69 [(487,(234,237)),(488,(242,248))] [(487,58),(488,48)]
+250 RecursorApp 249 12
+251 Lam n 48 250
+252 Constant 581 67 251
+253 Ctor 487 58 | 6
+254 App 252 253
+255 App 47 254
+256 Pi _ 9 9
+257 Lam a 1 12
+258 Constant 591 3 257
+259 App 258 12
+260 Pi _ 13 27
+261 Pi _ 12 260
+262 Pi _ 12 13
+263 Primitive 290 1
+264 Pi _ 263 13
+265 RecordType [("ringZero",259),("add",261),("sub",261),("mul",261),("neg",262),("int",264)]
+266 Lam a 1 265
+267 Constant 610 11 266
+268 App 267 12
+269 Pi _ 13 90
+270 Pi _ 268 269
+271 Pi a 1 270
+272 RecordType [("add",261),("int",264),("mul",261),("neg",262),("ringZero",12),("sub",261)]
+273 RecordProj 12 add
+274 Lam pa 272 273
+275 Lam a 1 274
+276 Constant 644 271 275
+277 App 276 9
+278 App 267 65
+279 Pi n 48 278
+280 Lam n 48 278
+281 App 267 70
+282 Pi n 2 281
+283 Pi _ 2 76
+284 Pi n 2 283
+285 Primitive 216 284
+286 App 285 12
+287 Nat 0
+288 App 286 287
+289 App 81 8
+290 Pi _ 76 289
+291 Pi _ 70 290
+292 Pi n 2 291
+293 Primitive 226 292
+294 App 293 12
+295 Primitive 245 292
+296 App 295 12
+297 Primitive 247 292
+298 App 297 12
+299 Pi _ 70 76
+300 Pi n 2 299
+301 Primitive 244 300
+302 App 301 12
+303 Pi _ 263 76
+304 Pi n 2 303
+305 Primitive 305 304
+306 App 305 12
+307 Record [("ringZero",288),("add",294),("sub",296),("mul",298),("neg",302),("int",306)]
+308 Lam n 2 307
+309 Constant 618 282 308
+310 App 309 12
+311 Lam n 2 310
+312 RecordType [("add",291),("int",303),("mul",291),("neg",299),("ringZero",70),("sub",291)]
+313 Pi n 2 312
+314 App 267 238
+315 App 144 314
+316 String "PRingSeqBool: no instance for streams"
+317 App 315 316
+318 Pi _ 238 238
+319 Pi _ 238 318
+320 Pi _ 263 238
+321 RecordType [("add",319),("int",320),("mul",319),("neg",318),("ringZero",238),("sub",319)]
+322 Recursor 486 1 | 280 69 [(487,(311,313)),(488,(317,321))] [(487,58),(488,48)]
+323 RecursorApp 322 12
+324 Lam n 48 323
+325 Constant 619 279 324
+326 App 325 253
+327 App 277 326
+328 Lam a 1 120
+329 Constant 633 56 328
+330 App 329 12
+331 Pi _ 330 13
+332 Pi a 1 331
+333 Pi val 48 332
+334 Lam _ 48 27
+335 Pi _ 48 1
+336 App 12 287
+337 Recursor 486 1 | 334 335 [(487,(12,128)),(488,(336,13))] [(487,58),(488,48)]
+338 RecursorApp 337 27
+339 Lam pa 120 338
+340 Lam a 1 339
+341 Lam val 48 340
+342 Constant 641 333 341
+343 Ctor 487 58 | 287
+344 App 342 343
+345 App 344 9
+346 App 329 65
+347 Pi n 48 346
+348 Lam n 48 346
+349 Pi n 48 1
+350 App 329 238
+351 App 144 350
+352 String "PLiteralSeqBool: no instance for streams"
+353 App 351 352
+354 Pi _ 2 238
+355 Recursor 486 1 | 348 349 [(487,(285,284)),(488,(353,354))] [(487,58),(488,48)]
+356 RecursorApp 355 12
+357 Lam n 48 356
+358 Constant 635 347 357
+359 App 358 253
+360 App 345 359
+361 Lam x 9 360
+362 Constant 826 256 361
+363 App 362 12
+364 App 327 363
+365 Nat 1
+366 Ctor 487 58 | 365
+367 App 342 366
+368 App 367 9
+369 App 368 359
+370 App 364 369
+371 Lam x 9 370
+372 Constant 827 256 371
+373 App 372 12
+374 App 255 373
+375 App 374 360
+376 Lam x 9 375

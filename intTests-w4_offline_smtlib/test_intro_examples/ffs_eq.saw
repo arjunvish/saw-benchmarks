@@ -1,0 +1,7 @@
+m <- llvm_load_module "ffs.bc";
+print "Extracting functional models...";
+ref <- llvm_extract m "ffs_ref";
+imp <- llvm_extract m "ffs_imp";
+print "Comparing reference and implementation...";
+r <- time (prove (w4_offline_smtlib2 "test_intro_examples-abc-02") {{ ref === imp }});
+print r;

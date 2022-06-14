@@ -1,0 +1,8 @@
+import "../../doc/tutorial/code/ffs.cry";
+FFS <- java_load_class "FFS";
+java_ffs_imp <- jvm_extract FFS "ffs_imp";
+prove_print (w4_offline_smtlib2 "test0019-01") {{ \x -> java_ffs_imp x == ffs_ref x }};
+
+Id <- java_load_class "Id";
+java_id_imp <- jvm_extract Id "id_imp";
+prove_print (w4_offline_smtlib2 "test0019-02") {{ \x -> java_id_imp x == x }};

@@ -1,0 +1,6 @@
+import "FNV_a1.cry";
+
+let main = do {
+    let thm = {{ \msg -> break secret1 (msg : [14][8]) }} ;
+    sat_print (w4_offline_smtlib2 "test_FNV_a1_rev-abc-01") thm;
+};

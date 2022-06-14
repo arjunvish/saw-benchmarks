@@ -1,0 +1,296 @@
+SAWCoreTerm 294
+[(15,Left "Prelude.String"),(16,Left "Prelude.error"),(45,Left "Prelude.Bool"),(137,Left "Prelude.Nat"),(138,Left "Prelude.Zero"),(139,Left "Prelude.Succ"),(140,Left "Prelude.Nat__rec"),(141,Left "Prelude.Nat_cases"),(142,Left "Prelude.Nat_cases2"),(155,Left "Prelude.addNat"),(164,Left "Prelude.subNat"),(176,Left "Prelude.Vec"),(177,Left "Prelude.gen"),(216,Left "Prelude.bvNat"),(273,Left "Prelude.Stream"),(486,Left "Cryptol.Num"),(487,Left "Cryptol.TCNum"),(488,Left "Cryptol.TCInf"),(491,Left "Cryptol.finNumRec"),(493,Left "Cryptol.binaryNumFun"),(496,Left "Cryptol.tcAdd"),(497,Left "Cryptol.tcSub"),(510,Left "Cryptol.seq"),(633,Left "Cryptol.PLiteral"),(635,Left "Cryptol.PLiteralSeqBool"),(690,Left "Cryptol.ecFromTo")]
+1 Sort 0 False
+2 Data 486 1 |
+3 Sort 0 True
+4 Pi a 1 1
+5 Data 137 1 |
+6 Var 1
+7 Pi _ 5 6
+8 Lam a 1 7
+9 Constant 633 4 8
+10 Var 0
+11 App 9 10
+12 Pi _ 1 1
+13 Pi _ 2 12
+14 Lam num 2 1
+15 Sort 1 False
+16 Pi num 2 15
+17 Pi _ 5 12
+18 Primitive 176 17
+19 App 18 10
+20 App 19 6
+21 Lam n 5 20
+22 Pi n 5 1
+23 Data 273 4 10 |
+24 Pi _ 5 2
+25 Recursor 486 1 | 14 16 [(487,(21,22)),(488,(23,1))] [(487,24),(488,2)]
+26 RecursorApp 25 6
+27 Lam a 1 26
+28 Lam num 2 27
+29 Constant 510 13 28
+30 Pi _ 2 2
+31 Pi _ 2 30
+32 Pi _ 5 5
+33 Pi _ 5 32
+34 Pi _ 2 31
+35 Pi _ 24 34
+36 Pi _ 24 35
+37 Pi _ 33 36
+38 Lam num1' 2 2
+39 Pi num1' 2 1
+40 Lam num2' 2 2
+41 Pi num2' 2 1
+42 Var 7
+43 App 42 6
+44 App 43 10
+45 Ctor 487 24 | 44
+46 Lam n2 5 45
+47 Pi n2 5 2
+48 Var 5
+49 App 48 10
+50 Recursor 486 1 | 40 41 [(487,(46,47)),(488,(49,2))] [(487,24),(488,2)]
+51 RecursorApp 50 6
+52 Lam n1 5 51
+53 Pi n1 5 2
+54 Var 3
+55 Var 2
+56 Recursor 486 1 | 40 41 [(487,(54,24)),(488,(55,2))] [(487,24),(488,2)]
+57 RecursorApp 56 10
+58 Recursor 486 1 | 38 39 [(487,(52,53)),(488,(57,2))] [(487,24),(488,2)]
+59 RecursorApp 58 6
+60 Lam num2 2 59
+61 Lam num1 2 60
+62 Lam f4 2 61
+63 Lam f3 24 62
+64 Lam f2 24 63
+65 Lam f1 33 64
+66 Constant 493 37 65
+67 Pi _ 55 54
+68 Pi _ 5 67
+69 Pi _ 5 54
+70 Pi _ 68 69
+71 Pi _ 10 70
+72 Pi a 15 71
+73 Pi _ 5 15
+74 Ctor 138 5 |
+75 App 10 74
+76 App 55 10
+77 Ctor 139 32 | 6
+78 App 54 77
+79 Pi _ 76 78
+80 Pi n 5 79
+81 App 54 10
+82 Pi n 5 81
+83 Pi _ 80 82
+84 Pi _ 75 83
+85 Pi p 73 84
+86 Nat 0
+87 App 10 86
+88 App 54 86
+89 Var 4
+90 App 89 10
+91 App 48 77
+92 Pi _ 90 91
+93 Pi n 5 92
+94 Recursor 137 1 | 54 73 [(138,(55,88)),(139,(6,93))] [(138,5),(139,32)]
+95 RecursorApp 94 10
+96 Lam n 5 95
+97 Lam f2 80 96
+98 Lam f1 87 97
+99 Lam p 73 98
+100 Constant 140 85 99
+101 Lam n 5 89
+102 App 100 101
+103 App 102 55
+104 App 103 6
+105 App 104 10
+106 Lam n 5 105
+107 Lam f2 68 106
+108 Lam f1 10 107
+109 Lam a 15 108
+110 Constant 141 72 109
+111 App 110 5
+112 App 111 10
+113 Ctor 139 32 | 10
+114 Lam prev_sum 5 113
+115 Lam _ 5 114
+116 App 112 115
+117 App 116 6
+118 Lam y 5 117
+119 Lam x 5 118
+120 Constant 155 33 119
+121 App 66 120
+122 Ctor 488 2 |
+123 Lam x 5 122
+124 App 121 123
+125 Lam y 5 122
+126 App 124 125
+127 App 126 122
+128 Constant 496 31 127
+129 Nat 1
+130 Ctor 487 24 | 129
+131 App 128 130
+132 Pi _ 5 55
+133 Pi _ 89 48
+134 Pi _ 5 133
+135 Pi _ 5 134
+136 Pi _ 5 48
+137 Pi _ 5 136
+138 Pi _ 135 137
+139 Pi _ 132 138
+140 Pi _ 7 139
+141 Pi a 15 140
+142 Pi _ 5 42
+143 Lam n 5 142
+144 App 100 143
+145 App 144 89
+146 Var 9
+147 Lam m' 5 146
+148 App 100 147
+149 Var 6
+150 App 149 55
+151 App 148 150
+152 App 42 89
+153 App 152 6
+154 App 54 6
+155 App 153 154
+156 Lam frec' 146 155
+157 Lam m' 5 156
+158 App 151 157
+159 App 158 10
+160 Lam m 5 159
+161 Lam f_rec 142 160
+162 Lam n 5 161
+163 App 145 162
+164 App 163 6
+165 App 164 10
+166 Lam m 5 165
+167 Lam n 5 166
+168 Lam f3 135 167
+169 Lam f2 132 168
+170 Lam f1 7 169
+171 Lam a 15 170
+172 Constant 142 141 171
+173 App 172 5
+174 Lam x' 5 10
+175 App 173 174
+176 Lam y' 5 74
+177 App 175 176
+178 Lam sub_xy 5 10
+179 Lam x' 5 178
+180 Lam y' 5 179
+181 App 177 180
+182 App 181 10
+183 App 182 6
+184 Lam y 5 183
+185 Lam x 5 184
+186 Constant 164 33 185
+187 App 66 186
+188 Ctor 487 24 | 86
+189 Lam x 5 188
+190 App 187 189
+191 App 190 125
+192 App 191 188
+193 Constant 497 31 192
+194 App 193 55
+195 App 194 54
+196 App 131 195
+197 App 29 196
+198 App 197 6
+199 Pi _ 11 198
+200 Pi a 3 199
+201 Pi last 2 200
+202 Pi first 2 201
+203 Sort 1 True
+204 Pi _ 2 203
+205 Ctor 487 24 | 10
+206 App 6 205
+207 Pi n 5 206
+208 Pi n 2 76
+209 Pi _ 207 208
+210 Pi p 204 209
+211 App 54 205
+212 Pi n 5 211
+213 Primitive 15 1
+214 Pi _ 213 6
+215 Pi a 203 214
+216 Primitive 16 215
+217 App 55 122
+218 App 216 217
+219 String "Unexpected Fin constraint violation!"
+220 App 218 219
+221 Recursor 486 1 | 55 204 [(487,(6,212)),(488,(220,217))] [(487,24),(488,2)]
+222 RecursorApp 221 10
+223 Lam n 2 222
+224 Lam f 207 223
+225 Lam p 204 224
+226 Constant 491 210 225
+227 Lam first 2 201
+228 App 226 227
+229 Ctor 487 24 | 54
+230 App 194 229
+231 App 131 230
+232 App 29 231
+233 App 232 6
+234 Pi _ 11 233
+235 Pi a 3 234
+236 Lam last 2 235
+237 App 226 236
+238 App 18 55
+239 App 238 6
+240 Pi _ 7 239
+241 Pi a 1 240
+242 Pi n 5 241
+243 Primitive 177 242
+244 App 120 129
+245 App 186 55
+246 App 245 54
+247 App 244 246
+248 App 243 247
+249 App 248 6
+250 App 120 10
+251 App 250 89
+252 App 6 251
+253 Lam i 5 252
+254 App 249 253
+255 Lam pa 7 254
+256 Lam a 3 255
+257 Lam last 5 256
+258 App 237 257
+259 Lam first 5 258
+260 App 228 259
+261 Constant 690 202 260
+262 App 261 130
+263 Nat 10
+264 Ctor 487 24 | 263
+265 App 262 264
+266 Nat 32
+267 App 18 266
+268 Primitive 45 1
+269 App 267 268
+270 App 265 269
+271 App 29 10
+272 App 271 268
+273 App 9 272
+274 Pi n 2 273
+275 Lam n 2 273
+276 Pi n 2 1
+277 App 18 6
+278 App 277 268
+279 Pi _ 5 278
+280 Pi n 5 279
+281 Primitive 216 280
+282 Data 273 4 268 |
+283 App 9 282
+284 App 216 283
+285 String "PLiteralSeqBool: no instance for streams"
+286 App 284 285
+287 Pi _ 5 282
+288 Recursor 486 1 | 275 276 [(487,(281,280)),(488,(286,287))] [(487,24),(488,2)]
+289 RecursorApp 288 10
+290 Lam n 2 289
+291 Constant 635 274 290
+292 Ctor 487 24 | 266
+293 App 291 292
+294 App 270 293
