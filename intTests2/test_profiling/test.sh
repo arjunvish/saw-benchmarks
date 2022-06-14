@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 
-$SAW dotprod_struct.saw
+saw dotprod_struct.saw

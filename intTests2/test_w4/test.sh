@@ -1,1 +1,1 @@
-$SAW prims.saw
+saw prims.saw

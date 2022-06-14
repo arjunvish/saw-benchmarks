@@ -1,1 +1,1 @@
-$SAW test.saw
+saw test.saw

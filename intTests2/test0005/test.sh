@@ -1,4 +1,4 @@
 set -e
 
-$SAW test.saw
-$SAW test2.saw
+saw test.saw
+saw test2.saw

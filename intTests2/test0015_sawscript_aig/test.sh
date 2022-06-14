@@ -2,6 +2,6 @@ set -e
 . ../sat.sh
 mkdir -p tmp
 
-$SAW test.saw
+saw test.saw
 
 rm -rf tmp

@@ -2,7 +2,7 @@ set -e
 . ../sat.sh
 mkdir -p tmp
 
-$SAW test.saw
+saw test.saw
 sat "tmp/x__x.cnf"
 unsat "tmp/x__x1.cnf"
 sat "tmp/x__y.cnf"

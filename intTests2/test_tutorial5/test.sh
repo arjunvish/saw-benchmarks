@@ -4,9 +4,9 @@ set -e
 mkdir -p tmp
 cp ../../doc/tutorial/code/* tmp
 cd tmp
-$SAW des-cryptol2.saw
-$SAW des3.saw
-$SAW dotprod.saw
-$SAW double.saw
+saw des-cryptol2.saw
+saw des3.saw
+saw dotprod.saw
+saw double.saw
 cd ..
 rm -r tmp

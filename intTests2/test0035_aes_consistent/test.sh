@@ -2,5 +2,5 @@
 set -e
 
 cp ../../examples/aes/aes.saw .
-$SAW aes.saw
+saw aes.saw
 rm -f aes.saw

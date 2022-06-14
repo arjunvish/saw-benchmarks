@@ -5,7 +5,7 @@ SCRIPT="%blast; &sweep -C 5000; &syn4; &cec -m; write_aiger_cex $CEX"
 
 rm -f ${CEX}
 
-$SAW test.saw
+saw test.saw
 
 abc -q "%read offline_verilog.prove0.v; $SCRIPT" || true;
 [ ! -f ${CEX} ]

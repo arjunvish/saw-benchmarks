@@ -1,3 +1,3 @@
 set -e
 
-$SAW recTest.saw
+saw recTest.saw

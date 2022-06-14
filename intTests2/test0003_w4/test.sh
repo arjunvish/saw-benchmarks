@@ -1,1 +1,1 @@
-$SAW divTest.saw
+saw divTest.saw

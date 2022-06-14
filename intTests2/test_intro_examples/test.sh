@@ -1,15 +1,15 @@
 #!/bin/sh
 set -e
 
-$SAW ffs_bug.saw
-$SAW ffs_bug_fail.saw
-$SAW ffs_eq.saw
-! $SAW ffs_extract.saw
-$SAW ffs_sat.saw
-$SAW rewrite.saw
-$SAW swap-simpler.saw
-! $SAW swap.saw
-$SAW swap_extract.saw
-$SAW unfold.saw
-! $SAW unint.saw
-$SAW write_cnf.saw
+saw ffs_bug.saw
+saw ffs_bug_fail.saw
+saw ffs_eq.saw
+! saw ffs_extract.saw
+saw ffs_sat.saw
+saw rewrite.saw
+saw swap-simpler.saw
+! saw swap.saw
+saw swap_extract.saw
+saw unfold.saw
+! saw unint.saw
+saw write_cnf.saw

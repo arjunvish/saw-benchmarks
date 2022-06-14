@@ -6,9 +6,9 @@ cp -r ../../examples tmp
 
 (cd ../../examples &&
 for f in `find aes fresh-post ghost java llvm multi-override partial-spec -name "*.saw"` ; do
-    (cd `dirname $f` && $SAW `basename $f`)
+    (cd `dirname $f` && saw `basename $f`)
 done)
 
-(cd ../../examples/salsa20 && $SAW salsa.saw)
+(cd ../../examples/salsa20 && saw salsa.saw)
 
 rm -r tmp

@@ -1,3 +1,3 @@
 #!/bin/sh
 set -xe
-$SAW test_unint.saw
+saw test_unint.saw

@@ -1,3 +1,3 @@
 set -e
 
-$SAW refarray.saw
+saw refarray.saw

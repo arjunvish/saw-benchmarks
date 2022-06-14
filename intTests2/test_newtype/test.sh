@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 
-$SAW complex_newtype.saw
+saw complex_newtype.saw

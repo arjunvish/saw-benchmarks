@@ -4,11 +4,11 @@ set -e
 mkdir -p tmp
 cp ../../doc/tutorial/code/* tmp
 cd tmp
-$SAW ffs_java.saw
-$SAW ffs_java_crucible.saw
-$SAW ffs_llvm.saw
-$SAW ffs_compare.saw
-$SAW ffs_gen_aig.saw
-$SAW ffs_compare_aig.saw
+saw ffs_java.saw
+saw ffs_java_crucible.saw
+saw ffs_llvm.saw
+saw ffs_compare.saw
+saw ffs_gen_aig.saw
+saw ffs_compare_aig.saw
 cd ..
 rm -r tmp

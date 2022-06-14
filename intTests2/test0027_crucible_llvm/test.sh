@@ -1,2 +1,2 @@
 #!/bin/sh
-$SAW test.saw
+saw test.saw

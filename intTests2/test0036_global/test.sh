@@ -5,10 +5,10 @@ set -e
 #####
 
 # These tests should pass
-$SAW test-appropriate-overrides.saw
-$SAW test-global-initializer.saw
-$SAW test-sketchy-overrides-O2.saw
+saw test-appropriate-overrides.saw
+saw test-global-initializer.saw
+saw test-sketchy-overrides-O2.saw
 
 # These tests should fail
-! $SAW test-no-init.saw
-! $SAW test-sketchy-overrides-O1.saw
+! saw test-no-init.saw
+! saw test-sketchy-overrides-O1.saw
